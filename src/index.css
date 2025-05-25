@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+
+@tailwind utilities;
+
+/* CSS Variables from original HTML body style attribute */
+body {
+  --checkbox-tick-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill='%23fff'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e');
+  --radio-dot-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill='%230c7ff2'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='4'/%3e%3c/svg%3e');
+  --select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill='%2349739c'%20viewBox='0 0 256 256'%3e%3cpath d='M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z'%3e%3c/path%3e%3c/svg%3e');
+  font-family: 'Vazirmatn', Inter, 'Noto Sans', sans-serif;
+}
+
+/* Custom CSS rules from original style block */
+.gradient-hero {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%),
+    url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-ooyxoy_f2Cd_azPs7eeOonZIvQcFET2Xw5YF7oBcFwRTJNZFVap7IBf_1b3CFxFyYWzOu_4kaJIPK-RoiLi7x-qYI6f1UWnMKPqlZuVZjZxPaJ92FpJte8XGOGJgIH8sF9VI615Iui8deX66Bmtlp3_2Ahi-x3fxmqvVSM1EbNAwMmUrlzEs-CRmdy5frMmORcBR4oWNaTGIX_HoLTnNEQcf9u784QG5E5Cw7_sIFjy3gmMCxdCxMw_bRH6mUJiEuI1TgMwONrY");
+  background-size: cover;
+  background-position: center;
+}
+.category-tag {
+  background: linear-gradient(135deg, #0c7ff2 0%, #3a9bf8 100%);
+  transition: all 0.3s ease;
+}
+.category-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.tool-card {
+  border: 1px solid #e7edf4;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.tool-card:hover {
+  box-shadow: 0 8px 16px rgba(12, 127, 242, 0.1);
+  transform: translateY(-4px);
+}
+.btn-primary-gradient {
+  background: linear-gradient(135deg, #0c7ff2 0%, #3a9bf8 100%);
+}
+.btn-primary-gradient:hover {
+  background: linear-gradient(135deg, #0a6dd0 0%, #2f87e0 100%);
+}
+.filter-sidebar {
+  background-color: #f8fafc;
+  border-left: 1px solid #e7edf4; /* Changed from border-right for RTL */
+}
+.filter-title {
+  color: #0d141c;
+  border-bottom: 1px solid #e7edf4;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+.checkbox-custom:checked {
+  background-image: var(--checkbox-tick-svg) !important;
+  background-color: #0c7ff2 !important;
+  border-color: #0c7ff2 !important;
+}
+.radio-custom:checked {
+  background-image: var(--radio-dot-svg) !important;
+  border-color: #0c7ff2 !important;
+}
+.nav-link-hover:hover {
+  color: #0c7ff2;
+  position: relative;
+}
+.nav-link-hover:hover::after {
+  content: "";
+  position: absolute;
+  right: 0; /* Changed from left: 0 for RTL */
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #0c7ff2;
+}
+/* Ensure select arrow is on the left for RTL */
+select.form-select {
+  background-position: left 0.5rem center;
+}
