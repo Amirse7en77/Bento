@@ -15,9 +15,17 @@ const Home = () => {
 
   return (
     <>
-      <div className="absolute inset-0  opacity-100 z-20 block md:hidden">
-        {isDrawerOpen && <Sidebar />}
-      </div>
+      <div className="relative"> 
+  
+
+  {isDrawerOpen && (
+    <div className="absolute  h-full w-[80%] bg-white shadow-lg z-20"> {/* Example styling for sidebar */}
+      <Sidebar />
+    </div>
+  )}
+
+  
+</div>
       <div className="layout-container flex h-full grow flex-col ">
         
 
