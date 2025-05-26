@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FaCheckCircle } from "react-icons/fa";
 const ExpertReviewSection: React.FC = () => {
   return (
     <section className="mb-8 rounded-xl border border-slate-200 bg-white p-6 shadow-lg">
@@ -26,23 +26,23 @@ const ExpertReviewSection: React.FC = () => {
         <h3>ویژگی‌های کلیدی:</h3> {/* Key Features */}
         <ul className="list-none pr-0">
           <li className="flex items-center gap-2">
-            <span className="material-icons text-base text-green-500">check_circle</span>
+            <span className="material-icons text-base text-green-500"><FaCheckCircle /></span>
             NLP پیشرفته برای تولید متن طبیعی
           </li> {/* Advanced NLP for natural text generation */}
           <li className="flex items-center gap-2">
-            <span className="material-icons text-base text-green-500">check_circle</span>
+            <span className="material-icons text-base text-green-500"><FaCheckCircle /></span>
             پشتیبانی از طیف گسترده‌ای از وظایف نوشتاری
           </li> {/* Wide range of writing task support */}
           <li className="flex items-center gap-2">
-            <span className="material-icons text-base text-green-500">check_circle</span>
+            <span className="material-icons text-base text-green-500"><FaCheckCircle /></span>
             رابط کاربری ساده
           </li> {/* User-friendly interface */}
           <li className="flex items-center gap-2">
-            <span className="material-icons text-base text-green-500">check_circle</span>
+            <span className="material-icons text-base text-green-500"><FaCheckCircle /></span>
             خروجی قابل تنظیم (لحن، سبک، طول)
           </li> {/* Customizable output (tone, style, length) */}
           <li className="flex items-center gap-2">
-            <span className="material-icons text-base text-green-500">check_circle</span>
+            <span className="material-icons text-base text-green-500"><FaCheckCircle /></span>
             عملکرد قابل اعتماد و کارآمد
           </li> {/* Reliable and efficient performance */}
         </ul>

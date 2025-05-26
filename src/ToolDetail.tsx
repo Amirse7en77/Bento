@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './components/productComponents/Header';
+
 import HeroBanner from './components/productComponents/HeroBanner';
 import ActionButtons from './components/productComponents/ActionButtons';
 import ExpertReviewSection from './components/productComponents/ExpertReviewSection';
@@ -7,7 +7,6 @@ import PricingSection from './components/productComponents/PricingSection';
 import TagsSection from './components/productComponents/TagsSection';
 import AccessibilityInfo from './components/productComponents/AccessibilityInfo';
 import AiReviewSection from './components/productComponents/AiReviewSection';
-import Footer from './components/productComponents/Footer';
 
 const ToolDetail: React.FC = () => {
   const toolTags: string[] = ['نوشتار', 'بهره‌وری', 'تولید محتوا', 'هوش مصنوعی', 'دستیار']; // Writing, Productivity, Content Creation, AI, Assistant
@@ -21,7 +20,7 @@ const ToolDetail: React.FC = () => {
         Ensure your public/index.html is configured for RTL, fonts, and icons.
       */}
 
-      <Header />
+      
 
       <main className="flex-1">
         <HeroBanner
@@ -41,14 +40,14 @@ const ToolDetail: React.FC = () => {
 
             <aside className="space-y-8 lg:sticky lg:top-28 lg:h-fit">
               <TagsSection tags={toolTags} />
-              <AccessibilityInfo text="قابل دسترس در ایران" /> {/* Accessible in Iran */}
+              <AccessibilityInfo text="غیر قابل دسترس در ایران" /> {/* Accessible in Iran */}
               <AiReviewSection />
             </aside>
           </div>
         </div>
       </main>
 
-      <Footer />
+     
     </div>
   );
 };

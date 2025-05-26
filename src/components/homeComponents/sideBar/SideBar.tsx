@@ -2,10 +2,16 @@ import React from 'react';
 import Checkbox from '../../ui/CheckBox';
 import Radio from '../../ui/Radio';
 import Select from '../../ui/Select';
+import { useDispatch } from 'react-redux';
+import { closeDrawer } from '@/slice/servicesSlice';
 
 const Sidebar: React.FC = () => {
+ const dispatch=useDispatch()
+  const handleFilter=()=>{
+    dispatch(closeDrawer())
+  }
   return (
-    <aside className="filter-sidebar w-80 shrink-0 p-6 space-y-6 sticky top-[calc(64px+1rem)] h-[calc(100vh-64px-2rem)] overflow-y-auto hidden md:block">
+    <aside className="filter-sidebar w-80 shrink-0 p-6 space-y-6 sticky top-[calc(64px+1rem)] h-[calc(100vh-64px-2rem)] overflow-y-auto ">
       <div>
         <h3 className="filter-title text-lg font-semibold">فیلترها</h3>
       </div>
@@ -45,6 +51,11 @@ const Sidebar: React.FC = () => {
           ]}
           defaultValue="popular"
         />
+      </div>
+      <div>
+        <button onClick={handleFilter} className='btn-primary-gradient p-2 rounded-2xl text-white cursor-pointer'>
+          اعمال  فیلتر ها
+        </button>
       </div>
     </aside>
   );
