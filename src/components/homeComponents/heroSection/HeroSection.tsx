@@ -20,11 +20,12 @@ const HeroSection: React.FC = () => {
               <div className="text-[#49739c] flex bg-slate-50 items-center justify-center pr-4">
                 <SearchIcon size="20px" />
               </div>
-              <input
-                className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-[#0d141c] focus:outline-0 focus:ring-0 border-none bg-slate-50 h-full placeholder:text-[#6b7f99] px-4 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal"
-                placeholder="ابزارهایی مانند «ویرایشگر تصویر» یا «دستیار کدنویسی» را جستجو کنید..."
-                defaultValue=""
-              />
+             <input
+        type="text" // Good practice to specify type
+        className="form-input flex w-full min-w-0 overflow-hidden text-[#0d141c] focus:outline-0 focus:ring-0 border-none bg-slate-50 h-full placeholder:text-[#6b7f99] px-4 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal"
+        placeholder="ابزارهایی مانند «ویرایشگر تصویر» یا «دستیار کدنویسی» را جستجو کنید..."
+       
+      />
               <button className="btn-primary-gradient flex min-w-[100px] @[480px]:min-w-[120px] cursor-pointer items-center justify-center h-full px-5 @[480px]:px-6 text-slate-50 text-sm font-semibold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-semibold @[480px]:leading-normal @[480px]:tracking-[0.015em] transition-all duration-300">
                 <span className="truncate">جستجو</span>
               </button>
