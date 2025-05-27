@@ -1,4 +1,4 @@
-import Header from "./components/homeComponents/header/Header";
+
 
 import HeroSection from "./components/homeComponents/heroSection/HeroSection";
 
@@ -19,7 +19,7 @@ const Home = () => {
   
 
   {isDrawerOpen && (
-    <div className="absolute  h-full w-[80%] bg-white shadow-lg z-20"> {/* Example styling for sidebar */}
+    <div className="absolute  h-full w-[80%] bg-white shadow-lg z-20 block md:hidden"> {/* Example styling for sidebar */}
       <Sidebar />
     </div>
   )}

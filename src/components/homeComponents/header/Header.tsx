@@ -5,11 +5,13 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import {  toggleDrawer } from '@/slice/servicesSlice';
 import type { RootState } from '@/store/store';
+import { useProductFilter } from '@/hooks/useProductFilter';
+import { useSearchFilter } from '@/hooks/useSearchFiler';
 
 
 const Header: React.FC = () => {
     const isDrawerOpen = useSelector((state: RootState) => state.drawer.isOpen);
-
+  const [searchQuery,setSearchQuery]=useState('')
   const dispatch = useDispatch();
       const buttonClasses = `
     text-[#0d141c]
@@ -27,6 +29,11 @@ const Header: React.FC = () => {
       dispatch(toggleDrawer())
        
     }
+    const {search,setSearch}=useSearchFilter()
+   const handleSearch=()=>{
+    setSearch({search:searchQuery})
+    setSearchQuery('')
+   }
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf4] bg-slate-300 px-10 py-4 backdrop-blur-md ">
       <div className=" items-center gap-10 " >
@@ -61,10 +68,19 @@ const Header: React.FC = () => {
             <SearchIcon size="20px" />
           </div>
           <input
+          value={searchQuery}
             className="form-input w-full rounded-lg border border-slate-300 bg-slate-100 py-2 pr-10 pl-4 text-sm text-[#0d141c] placeholder:text-[#49739c] focus:border-[#0c7ff2] focus:ring-1 focus:ring-[#0c7ff2]"
             placeholder="جستجوی ابزارها..."
             defaultValue=""
+            onChange={(e)=>setSearchQuery(e.target.value)}
+            
           />
+         <button
+        onClick={handleSearch} 
+        className="px-6 py-2 btn-primary-gradient hover:bg-blue-700 text-white font-medium rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-200 ease-in-out"
+      >
+        جستجو کن
+      </button>
         </label>
        
       
