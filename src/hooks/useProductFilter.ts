@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom"
 
 export const useProductFilter=()=>{
      const [searchParams,setSearchParams]=useSearchParams()
-  
+  const searchFilter = searchParams.get("searchFilter") as productFilter["searchFilter"];
   const feature=searchParams.get("feature") as productFilter['feature']
   const category=searchParams.get("category")as productFilter['category']
   const price=searchParams.get("price")as productFilter['price']
@@ -12,7 +12,9 @@ export const useProductFilter=()=>{
 
  const setFilters=useCallback((filters:productFilter)=>{
     setSearchParams((params)=>{
-        
+        if (filters.searchFilter !== null && filters.searchFilter !== undefined) {
+        params.set("searchFilter", filters.searchFilter);
+      }
          if(filters.feature!==null&& filters.feature!==undefined){
             params.set('feature',filters.feature)
         }
@@ -30,7 +32,7 @@ export const useProductFilter=()=>{
    
  },[])
  return{
-    
+    searchFilter,
     feature,
     category,
     price,
