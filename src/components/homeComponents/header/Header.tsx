@@ -7,7 +7,7 @@ import {  toggleDrawer } from '@/slice/servicesSlice';
 import type { RootState } from '@/store/store';
 
 import { useSearchFilter } from '@/hooks/useSearchFiler';
-import { useProductFilter } from '@/hooks/useProductFilter';
+
 
 
 const Header: React.FC = () => {
@@ -62,29 +62,7 @@ const Header: React.FC = () => {
       </div>
       
      
-       <div className="flex items-center gap-6">
-        <label className="relative flex items-center min-w-40 !h-10 max-w-64">
-          <div className="text-[#49739c] absolute right-3 top-1/2 -translate-y-1/2">
-            <SearchIcon size="20px" />
-          </div>
-          <input
-          value={searchQuery}
-            className="form-input w-full rounded-lg border border-slate-300 bg-slate-100 py-2 pr-10 pl-4 text-sm text-[#0d141c] placeholder:text-[#49739c] focus:border-[#0c7ff2] focus:ring-1 focus:ring-[#0c7ff2]"
-            placeholder="جستجوی ابزارها..."
-            defaultValue=""
-            onChange={(e)=>setSearchQuery(e.target.value)}
-            
-          />
-         <button
-        onClick={()=>setSearch({search:searchQuery})} 
-        className="px-6 py-2 btn-primary-gradient hover:bg-blue-700 text-white font-medium rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-200 ease-in-out"
-      >
-        جستجو کن
-      </button>
-        </label>
        
-      
-      </div>
     </header>
   );
 };
