@@ -1,4 +1,5 @@
-import type { productFilter } from "@/components/homeComponents/sideBar/Sidebar"
+
+import type { productFilter } from "./../components/homeComponents/sideBar/SideBar";
 import { useCallback } from "react"
 import { useSearchParams } from "react-router-dom"
 

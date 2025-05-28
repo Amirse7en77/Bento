@@ -1,5 +1,7 @@
 import React from 'react';
 import ToolCard from '../toolCard/ToolCard';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios'
 
 const tools = [
   {
@@ -45,6 +47,20 @@ const tools = [
 ];
 
 const ToolGrid: React.FC = () => {
+  const {data,isSuccess}=useQuery({
+    queryKey:['product'],
+    queryFn:()=>axios.get("http://localhost:8000/categories")
+
+  })
+  if(isSuccess){
+    data.data.map((category:{category:string,tools:[]})=>(
+      
+     category.tools.map((tool)=>(
+      console.log(tool)
+     )) 
+     
+    ))
+  }
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
       {tools.map((tool, index) => (

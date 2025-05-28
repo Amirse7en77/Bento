@@ -4,7 +4,7 @@ import Radio from "../../ui/Radio";
 import Select from "../../ui/Select";
 
 import { useProductFilter } from "@/hooks/useProductFilter";
-import { SearchIcon } from "@/components/ui/Icon";
+
 
 export interface productFilter {
   search: string | null;
