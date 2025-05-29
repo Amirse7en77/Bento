@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import ToolDetail from "../ToolDetail";
-import Home from "../Home";
+import ToolDetail from "./../pages/ToolDetail";
+import Home from "./../pages/Home";
 import MainLayout from "@/layout/MainLayout";
 
 export const router = createBrowserRouter([
@@ -13,6 +13,10 @@ export const router = createBrowserRouter([
         path: "tools",
         element: <ToolDetail />,
       },
+      {
+        path:'tools/:toolsId',
+        element:<ToolDetail/>
+      }
     ],
   },
 ]);

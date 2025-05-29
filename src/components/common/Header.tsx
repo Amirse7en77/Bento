@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SearchIcon } from '../../ui/Icon'; // Assuming you create this file
+
 import { GoSidebarExpand } from 'react-icons/go';
 import { useDispatch, useSelector } from 'react-redux';
 

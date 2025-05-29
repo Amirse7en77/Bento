@@ -1,12 +1,12 @@
 
 
-import HeroSection from "./components/homeComponents/heroSection/HeroSection";
+import HeroSection from "./../components/homeComponents/heroSection/HeroSection";
 
-import ToolGrid from "./components/homeComponents/toolGrid/ToolGrid";
-import Pagination from "./components/homeComponents/pagination/Pagination";
+import ToolGrid from "./../components/homeComponents/toolGrid/ToolGrid";
+
 import { useSelector } from "react-redux";
-import type { RootState } from "./store/store";
-import Sidebar from "./components/homeComponents/sideBar/Sidebar";
+import type { RootState } from "./../store/store";
+import Sidebar from "./../components/homeComponents/sideBar/SideBar";
 
 
 
@@ -44,7 +44,7 @@ const Home = () => {
               <ToolGrid />
             </div>
             </div>
-            <Pagination />
+            
           </main>
         </div>
       </div>

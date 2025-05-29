@@ -1,12 +1,12 @@
 import React from 'react';
 
-import HeroBanner from './components/productComponents/HeroBanner';
-import ActionButtons from './components/productComponents/ActionButtons';
-import ExpertReviewSection from './components/productComponents/ExpertReviewSection';
-import PricingSection from './components/productComponents/PricingSection';
-import TagsSection from './components/productComponents/TagsSection';
-import AccessibilityInfo from './components/productComponents/AccessibilityInfo';
-import AiReviewSection from './components/productComponents/AiReviewSection';
+import HeroBanner from './../components/productComponents/HeroBanner';
+import ActionButtons from './../components/productComponents/ActionButtons';
+import ExpertReviewSection from './../components/productComponents/ExpertReviewSection';
+import PricingSection from './../components/productComponents/PricingSection';
+import TagsSection from './../components/productComponents/TagsSection';
+import AccessibilityInfo from './../components/productComponents/AccessibilityInfo';
+import AiReviewSection from './../components/productComponents/AiReviewSection';
 
 const ToolDetail: React.FC = () => {
   const toolTags: string[] = ['نوشتار', 'بهره‌وری', 'تولید محتوا', 'هوش مصنوعی', 'دستیار']; // Writing, Productivity, Content Creation, AI, Assistant
