@@ -7,6 +7,7 @@ import ToolGrid from "./../components/homeComponents/toolGrid/ToolGrid";
 import { useSelector } from "react-redux";
 import type { RootState } from "./../store/store";
 import Sidebar from "./../components/homeComponents/sideBar/SideBar";
+import InfiniteScrollComponent from "@/components/common/infiniteScrollComponent";
 
 
 
@@ -36,13 +37,7 @@ const Home = () => {
               <div className="hidden md:block">
               <Sidebar />
             </div>
-            <div >
-              <h2 className="text-[#0d141c] text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-6">
-                ابزارهای هوش مصنوعی ویژه
-              </h2>
-
-              <ToolGrid />
-            </div>
+           <ToolGrid/>
             </div>
             
           </main>

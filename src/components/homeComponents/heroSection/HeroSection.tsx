@@ -1,27 +1,36 @@
-import React, { useState } from 'react';
-import { SearchIcon } from '../../ui/Icon';
-import CategoryTags from '../categoryTags/CategoryTags';
-import { useProductFilter } from '@/hooks/useProductFilter';
+import React, { useState } from "react";
+import { SearchIcon } from "../../ui/Icon";
+import CategoryTags from "../categoryTags/CategoryTags";
+import { useProductFilter } from "@/hooks/useProductFilter";
 
 const HeroSection: React.FC = () => {
-  const [searchFilter, setSearchFilter] = useState('');
+  const [searchFilter, setSearchFilter] = useState("");
   console.log(searchFilter);
   const { search, setSearch } = useProductFilter(); // Destructure setSearch
-  const handleSearch=()=>{
-    setSearch(searchFilter)
-    setSearchFilter('')
-  }
+  const handleSearch = () => {
+    setSearch(searchFilter);
+    setSearchFilter("");
+  };
 
   return (
     <div className="@container">
       <div className="@[480px]:p-4">
-        <div className="gradient-hero flex min-h-[400px] @[480px]:min-h-[480px] flex-col gap-6 @[480px]:gap-8 rounded-xl items-center justify-center p-6 text-center shadow-xl">
+        <div
+          className="gradient-hero flex min-h-[400px] @[480px]:min-h-[480px] flex-col gap-6 @[480px]:gap-8 rounded-xl items-center justify-center p-6 text-center shadow-xl"
+          style={{
+            backgroundImage:
+              "url(https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
           <div className="flex flex-col gap-3">
             <h1 className="text-white text-4xl font-black leading-tight tracking-tight @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-tight">
               بهترین ابزارهای هوش مصنوعی را فوراً کشف کنید
             </h1>
             <h2 className="text-slate-200 text-base font-normal leading-relaxed @[480px]:text-lg @[480px]:font-normal @[480px]:leading-relaxed max-w-2xl mx-auto">
-              مجموعه‌ای منتخب از ابزارهای مبتنی بر هوش مصنوعی را برای افزایش بهره‌وری و خلاقیت خود کاوش کنید.
+              مجموعه‌ای منتخب از ابزارهای مبتنی بر هوش مصنوعی را برای افزایش
+              بهره‌وری و خلاقیت خود کاوش کنید.
             </h2>
           </div>
           <label className="flex flex-col min-w-40 h-14 w-full max-w-xl @[480px]:h-16 shadow-lg">
@@ -37,7 +46,10 @@ const HeroSection: React.FC = () => {
                 onChange={(e) => setSearchFilter(e.target.value)}
               />
               {/* Change this line */}
-              <button onClick={handleSearch} className="btn-primary-gradient flex min-w-[100px] @[480px]:min-w-[120px] cursor-pointer items-center justify-center h-full px-5 @[480px]:px-6 text-slate-50 text-sm font-semibold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-semibold @[480px]:leading-normal @[480px]:tracking-[0.015em] transition-all duration-300">
+              <button
+                onClick={handleSearch}
+                className="btn-primary-gradient flex min-w-[100px] @[480px]:min-w-[120px] cursor-pointer items-center justify-center h-full px-5 @[480px]:px-6 text-slate-50 text-sm font-semibold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-semibold @[480px]:leading-normal @[480px]:tracking-[0.015em] transition-all duration-300"
+              >
                 <span className="truncate">جستجو</span>
               </button>
             </div>
