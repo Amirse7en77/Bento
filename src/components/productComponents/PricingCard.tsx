@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaCheckCircle } from 'react-icons/fa';
 
 export interface PricingCardProps { // Export this interface as it's used by PricingSection
   title: string;
@@ -53,7 +54,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
       <ul className="space-y-2 text-sm text-slate-600">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center gap-2">
-            <span className="material-icons text-base text-green-500">check_circle</span>
+            <span className="material-icons text-base text-green-500"><FaCheckCircle/></span>
             {feature}
           </li>
         ))}

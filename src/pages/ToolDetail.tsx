@@ -22,7 +22,7 @@ const ToolDetail: React.FC = () => {
 
       
 
-      <main className="flex-1">
+      <main className="flex-1 dark:bg-gray-900">
         <HeroBanner
           imageUrl="https://lh3.googleusercontent.com/aida-public/AB6AXuD8sKcaekBbABQT2Gtt3_RFazri9IKujvPpir6ySfM9KVow9RZ9f7dmKSU7dBvOHXKorIWxCwG_23hG_OZwJCWJ3yQbGgKBE03cxStfodgwP64X9WNHx9NnSZXjMBGpLM7h5xVcth7Q3d3aGkZy38PTqpUX2tNRH8"
           altText="بنر فناوری انتزاعی" // Abstract Technology Banner

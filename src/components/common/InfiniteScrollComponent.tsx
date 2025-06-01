@@ -22,7 +22,7 @@ interface InfiniteScrollComponentProps {
 }
 
 const InfiniteScrollComponent = ({ initialProducts }:InfiniteScrollComponentProps) => {
-  
+  console.log(initialProducts)
   const [items, setItems] = useState([]);
   const [displayedItems, setDisplayedItems] = useState([]);
   const [hasMore, setHasMore] = useState(true);

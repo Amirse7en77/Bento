@@ -27,7 +27,7 @@ const Home = () => {
 
   
 </div>
-      <div className="layout-container flex h-full grow flex-col ">
+      <div className="layout-container flex h-full grow flex-col dark:bg-gray-900">
         
 
         <div className="flex flex-1">
