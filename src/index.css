@@ -69,7 +69,6 @@ body {
   background-position: center;
 }
 .category-tag {
- 
   transition: all 0.3s ease;
 }
 .category-tag:hover {
@@ -87,10 +86,24 @@ body {
 .btn-primary-gradient {
   background: linear-gradient(135deg, #121212 0%, #0a066e 100%);
 }
-.btn-primary-gradient:hover {
-  background: linear-gradient(135deg, #a586be 0%, #3a0071 100%);
+.filter-sidebar {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  -webkit-scrollbar-width: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
-
+.filter-sidebar::-webkit-scrollbar {
+  display: none;
+}
+.btn-primary-gradient:hover {
+  background: linear-gradient(135deg, #2a0846 0%, #710020 100%);
+}
+.dark .btn-primary-gradient {
+  background: linear-gradient(135deg, #a91b1b 0%, #2a0846 100%);
+}
+.dark .btn-primary-gradient:hover {
+  background: linear-gradient(135deg, #f40202 0%, #74747c 100%);
+}
 .filter-sidebar {
   background-color: #f8fafc;
   border-left: 1px solid #e7edf4; /* Changed from border-right for RTL */

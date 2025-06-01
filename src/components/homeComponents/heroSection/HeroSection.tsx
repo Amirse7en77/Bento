@@ -48,7 +48,7 @@ const HeroSection: React.FC = () => {
               {/* Change this line */}
               <button
                 onClick={handleSearch}
-                className="btn-primary-gradient flex min-w-[100px] @[480px]:min-w-[120px] cursor-pointer items-center justify-center h-full px-5 @[480px]:px-6 text-slate-50 text-sm font-semibold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-semibold @[480px]:leading-normal @[480px]:tracking-[0.015em] transition-all duration-300"
+                className="btn-primary-gradient flex min-w-[100px] @[480px]:min-w-[120px] cursor-pointer items-center justify-center h-full px-5 @[480px]:px-6 text-slate-50 text-sm font-semibold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-semibold @[480px]:leading-normal @[480px]:tracking-[0.015em] transition-all duration-300 "
               >
                 <span className="truncate">جستجو</span>
               </button>
