@@ -25,10 +25,10 @@ const HeroSection: React.FC = () => {
           }}
         >
           <div className="flex flex-col gap-3">
-            <h1 className="text-white text-4xl font-black leading-tight tracking-tight @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-tight dark:text-black">
+            <h1 className="text-white text-4xl font-black leading-tight tracking-tight @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-tight dark:text-black duration-1000 transition-colors">
               بهترین ابزارهای هوش مصنوعی را فوراً کشف کنید
             </h1>
-            <h2 className="text-slate-200 text-base font-normal leading-relaxed @[480px]:text-lg @[480px]:font-normal @[480px]:leading-relaxed max-w-2xl mx-auto dark:text-black">
+            <h2 className="text-slate-200 text-base font-normal leading-relaxed @[480px]:text-lg @[480px]:font-normal @[480px]:leading-relaxed max-w-2xl mx-auto dark:text-black duration-1000 transition-colors">
               مجموعه‌ای منتخب از ابزارهای مبتنی بر هوش مصنوعی را برای افزایش
               بهره‌وری و خلاقیت خود کاوش کنید.
             </h2>

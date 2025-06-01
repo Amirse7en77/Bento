@@ -11,16 +11,16 @@ const Home = () => {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative ">
         {isDrawerOpen && (
-          <div className="absolute  h-full w-[80%] bg-white shadow-lg z-20 block md:hidden">
+          <div className="absolute  h-full w-[80%] bg-white shadow-lg z-20 block md:hidden ">
             {" "}
             {/* Example styling for sidebar */}
             <Sidebar />
           </div>
         )}
       </div>
-      <div className="layout-container flex h-full grow flex-col dark:bg-gray-900">
+      <div className="layout-container flex h-full grow flex-col dark:bg-gray-900 duration-1000 transition-colors">
         <div className="flex flex-1">
           <main className="flex-1 p-6">
             <HeroSection />

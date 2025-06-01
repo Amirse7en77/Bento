@@ -26,7 +26,7 @@ const Sidebar: React.FC = () => {
   } = useProductFilter();
 
   return (
-    <aside className="filter-sidebar w-80 shrink-0 p-6 space-y-6 sticky top-[calc(64px+1rem)] h-[calc(100vh-64px-2rem)] overflow-y-auto ">
+    <aside className="filter-sidebar w-80 shrink-0 p-6 space-y-6 sticky top-[calc(64px+1rem)] h-[calc(100vh-64px-2rem)] overflow-y-auto rounded-md">
       <div>
         <h3 className="filter-title text-lg font-semibold">فیلترها</h3>
       </div>

@@ -102,7 +102,7 @@ const Header: React.FC = () => {
             onClick={() => setDarkMode(!darkMode)}
             aria-label="Toggle Dark Mode"
             className={`
-    ml-4 p-2 rounded-full transition-colors duration-300
+    ml-4 p-2 rounded-full transition-colors duration-1000
     ${
       darkMode
         ? "bg-slate-700 text-yellow-300 hover:bg-slate-600"

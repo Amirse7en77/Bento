@@ -69,7 +69,7 @@ body {
   background-position: center;
 }
 .category-tag {
-  background: linear-gradient(135deg, #0c7ff2 0%, #3a9bf8 100%);
+ 
   transition: all 0.3s ease;
 }
 .category-tag:hover {
@@ -85,11 +85,12 @@ body {
   transform: translateY(-4px);
 }
 .btn-primary-gradient {
-  background: linear-gradient(135deg, #0c7ff2 0%, #3a9bf8 100%);
+  background: linear-gradient(135deg, #121212 0%, #0a066e 100%);
 }
 .btn-primary-gradient:hover {
-  background: linear-gradient(135deg, #0a6dd0 0%, #2f87e0 100%);
+  background: linear-gradient(135deg, #a586be 0%, #3a0071 100%);
 }
+
 .filter-sidebar {
   background-color: #f8fafc;
   border-left: 1px solid #e7edf4; /* Changed from border-right for RTL */
