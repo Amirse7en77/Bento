@@ -6,7 +6,7 @@ import { useProductFilter } from "@/hooks/useProductFilter";
 const HeroSection: React.FC = () => {
   const [searchFilter, setSearchFilter] = useState("");
   console.log(searchFilter);
-  const { search, setSearch } = useProductFilter(); // Destructure setSearch
+  const { setSearch } = useProductFilter(); // Destructure setSearch
   const handleSearch = () => {
     setSearch(searchFilter);
     setSearchFilter("");

@@ -1,6 +1,6 @@
 // src/app/store.ts
-import { configureStore } from '@reduxjs/toolkit';
-import drawerReducer from './../slice/servicesSlice'; // Import the renamed reducer
+import { configureStore } from "@reduxjs/toolkit";
+import drawerReducer from "./../slice/servicesSlice"; // Import the renamed reducer
 
 export const store = configureStore({
   reducer: {

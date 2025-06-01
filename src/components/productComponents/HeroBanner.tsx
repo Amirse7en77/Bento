@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface HeroBannerProps {
   imageUrl: string;
@@ -6,7 +6,11 @@ interface HeroBannerProps {
   title: string;
 }
 
-const HeroBanner: React.FC<HeroBannerProps> = ({ imageUrl, altText, title }) => {
+const HeroBanner: React.FC<HeroBannerProps> = ({
+  imageUrl,
+  altText,
+  title,
+}) => {
   return (
     <div className="relative h-72 w-full overflow-hidden">
       <img

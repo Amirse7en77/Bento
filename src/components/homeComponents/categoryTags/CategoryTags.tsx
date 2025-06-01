@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const categories = ['تولید تصویر', 'تحلیل متن', 'ویرایش ویدئو'];
+const categories = ["تولید تصویر", "تحلیل متن", "ویرایش ویدئو"];
 
 const CategoryTags: React.FC = () => {
   return (

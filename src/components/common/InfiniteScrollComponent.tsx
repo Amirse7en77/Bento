@@ -1,10 +1,8 @@
-// components/common/infiniteScrollComponent.jsx
 import React, { useState, useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 
-import ToolCard from "../homeComponents/toolCard/ToolCard"; // Assuming this path is correct
+import ToolCard from "../homeComponents/toolCard/ToolCard";
 import LoadingSpinner from "./LoadingSpinner";
-
 
 export interface InitialProductProps {
   accessibleInIran: boolean;
@@ -13,45 +11,49 @@ export interface InitialProductProps {
   id: string;
   likes: string;
   name: string;
-  pricing: string[];
+  pricing: Array<{
+    plan: string;
+    price: string;
+    features: string;
+  }>;
   tags: string[];
   website: string;
 }
+
+
 interface InfiniteScrollComponentProps {
   initialProducts: InitialProductProps[];
 }
 
-const InfiniteScrollComponent = ({ initialProducts }:InfiniteScrollComponentProps) => {
-  console.log(initialProducts)
-  const [items, setItems] = useState([]);
-  const [displayedItems, setDisplayedItems] = useState([]);
+const InfiniteScrollComponent = ({
+  initialProducts,
+}: InfiniteScrollComponentProps) => {
+  const [items, setItems] = useState<InitialProductProps[]>([]);
+  const [displayedItems, setDisplayedItems] = useState<InitialProductProps[]>(
+    []
+  );
   const [hasMore, setHasMore] = useState(true);
-  const itemsPerPage = 8; // Number of items to load per scroll
+  const itemsPerPage = 8;
 
-  // Initialize items and displayedItems when initialProducts changes
   useEffect(() => {
     if (initialProducts) {
       setItems(initialProducts);
       setDisplayedItems(initialProducts.slice(0, itemsPerPage));
       setHasMore(initialProducts.length > itemsPerPage);
-      // No need to reset page here as we are dealing with initial load
     }
   }, [initialProducts]);
 
   const fetchMoreData = () => {
-    // If there are no more items to load, stop fetching
     if (displayedItems.length >= items.length) {
       setHasMore(false);
       return;
     }
 
-    // Simulate an API call delay
     setTimeout(() => {
       const nextItems = items.slice(
         displayedItems.length,
         displayedItems.length + itemsPerPage
       );
-
       setDisplayedItems((prev) => [...prev, ...nextItems]);
     }, 500);
   };
@@ -61,7 +63,7 @@ const InfiniteScrollComponent = ({ initialProducts }:InfiniteScrollComponentProp
       dataLength={displayedItems.length}
       next={fetchMoreData}
       hasMore={hasMore}
-      loader={<LoadingSpinner/>}
+      loader={<LoadingSpinner />}
       endMessage={
         <p style={{ textAlign: "center" }}>
           <b>Yay! You have seen all the tools.</b>

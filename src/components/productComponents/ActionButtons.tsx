@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { FiExternalLink } from "react-icons/fi";
 
 interface ActionButtonsProps {
@@ -7,7 +7,6 @@ interface ActionButtonsProps {
 }
 
 const ActionButtons: React.FC<ActionButtonsProps> = ({ visitUrl }) => {
-
   return (
     <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
       <div className="flex items-center gap-4">
@@ -17,10 +16,12 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({ visitUrl }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="material-icons text-lg"><FiExternalLink /></span>
+          <span className="material-icons text-lg">
+            <FiExternalLink />
+          </span>
           بازدید از وب‌سایت
-        </a> {/* Visit Website */}
-        
+        </a>{" "}
+        {/* Visit Website */}
       </div>
     </div>
   );
